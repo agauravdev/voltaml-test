@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div class="root">
+<!--    <img class="background" src="img/background.png"/>-->
+    <div class="container">
+      <div class="header">
+        <img src="img/voltaml.svg">
+        <img src="img/heading.png">
+        <img src="img/segmind.svg">
+      </div>
+      <div class="app">
+        <div class="toolbar">
+          <div class="demo-button">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.375 1.71078C1.375 0.997445 2.13917 0.545778 2.76417 0.889111L12.3808 6.17911C12.5278 6.26004 12.6504 6.37894 12.7358 6.52339C12.8211 6.66785 12.8662 6.83257 12.8662 7.00036C12.8662 7.16816 12.8211 7.33288 12.7358 7.47733C12.6504 7.62179 12.5278 7.74068 12.3808 7.82161L2.76417 13.1108C2.62147 13.1892 2.46079 13.2292 2.29797 13.2266C2.13514 13.2241 1.97578 13.1792 1.83558 13.0964C1.69538 13.0135 1.57918 12.8956 1.49842 12.7542C1.41766 12.6128 1.37512 12.4528 1.375 12.2899V1.71078V1.71078Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            &nbsp;&nbsp;
+            <span style="color: white">Demo</span>
+          </div>
+
+        </div>
+        <div class="demo">
+          <p style="font-size: 0.875rem">Prompt</p>
+          <label style="width: 100%">
+            <textarea style="padding: 1rem; width: 100%; background: #0D0D0D; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; color: white"></textarea>
+          </label>
+          <div class="main-demo">
+            <div class="sidebar">
+              <label for="images_number" class="form-label" style="margin-top: 1.5rem; padding-left: 0.5rem">No. of Images</label>
+              <select class="form-select images-number" aria-label="Default select example" id="images_number">
+                <option value="1">1</option>
+                <option value="4">4</option>
+              </select>
+              <label for="inference" class="form-label" style="margin-top: 1.5rem; padding-left: 0.5rem">Inference Steps</label>
+              <input type="text" class="form-control text-field" id="inference" placeholder="Inference Steps">
+
+              <label for="guidance" class="form-label" style="margin-top: 1.5rem; padding-left: 0.5rem">Guidance</label>
+              <input type="text" class="form-control text-field" id="guidance" placeholder="Guidance">
+              <div class="form-text" style="padding-left: 0.5rem">Max: 20</div>
+
+              <label for="model" class="form-label" style="margin-top: 1.5rem; padding-left: 0.5rem">Model</label>
+              <select class="form-select images-number" aria-label="Default select example" id="model">
+                <option value="1">v1.4</option>
+                <option value="4">v1.5</option>
+              </select>
+
+              <label for="seed" class="form-label" style="margin-top: 1.5rem; padding-left: 0.5rem">Seed</label>
+              <input type="text" class="form-control text-field" id="seed" placeholder="Seed">
+
+              <button class="submit-btn">
+                Submit <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.25 0.75L16.5 7M16.5 7L10.25 13.25M16.5 7H1.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              </button>
+
+              <button class="submit-btn" style="color: #6349DB; background: white">
+                Reset <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3524 5.78995H16.5124V5.78912M1.48741 14.3699V10.21M1.48741 10.21H5.64741M1.48657 10.21L4.13741 12.8624C4.99084 13.7159 6.0539 14.3296 7.21973 14.6419C8.38556 14.9543 9.61306 14.9542 10.7788 14.6417C11.9446 14.3292 13.0076 13.7153 13.8609 12.8617C14.7142 12.0082 15.3278 10.945 15.6399 9.77912M2.35907 6.22078C2.67121 5.0549 3.28477 3.99174 4.13807 3.13817C4.99137 2.28461 6.05435 1.67072 7.22013 1.35822C8.38591 1.04572 9.61342 1.04563 10.7792 1.35795C11.9451 1.67028 13.0081 2.28401 13.8616 3.13745L16.5124 5.78912M16.5124 1.62995V5.78828" stroke="#6349DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              </button>
+            </div>
+            <div class="output-images">
+              <h3> Image Output </h3>
+              <div style="height: 75%;" >
+
+              </div>
+              <svg width="198" height="112" viewBox="0 0 198 112" fill="none" xmlns="http://www.w3.org/2000/svg" cursor="pointer">
+                <g filter="url(#filter0_d_37_63)">
+                  <path d="M50.5 56H46.9091V44.3636H50.6591C51.7879 44.3636 52.7538 44.5966 53.5568 45.0625C54.3598 45.5246 54.9754 46.1894 55.4034 47.0568C55.8314 47.9205 56.0455 48.9545 56.0455 50.1591C56.0455 51.3712 55.8295 52.4148 55.3977 53.2898C54.9659 54.161 54.3371 54.8314 53.5114 55.3011C52.6856 55.767 51.6818 56 50.5 56ZM48.3182 54.75H50.4091C51.3712 54.75 52.1686 54.5644 52.8011 54.1932C53.4337 53.822 53.9053 53.2936 54.2159 52.608C54.5265 51.9223 54.6818 51.1061 54.6818 50.1591C54.6818 49.2197 54.5284 48.411 54.2216 47.733C53.9148 47.0511 53.4564 46.5284 52.8466 46.1648C52.2367 45.7973 51.4773 45.6136 50.5682 45.6136H48.3182V54.75ZM61.6127 56.1818C60.8249 56.1818 60.1336 55.9943 59.5389 55.6193C58.948 55.2443 58.4858 54.7197 58.1525 54.0455C57.823 53.3712 57.6582 52.5833 57.6582 51.6818C57.6582 50.7727 57.823 49.9792 58.1525 49.3011C58.4858 48.6231 58.948 48.0966 59.5389 47.7216C60.1336 47.3466 60.8249 47.1591 61.6127 47.1591C62.4006 47.1591 63.09 47.3466 63.6809 47.7216C64.2756 48.0966 64.7377 48.6231 65.0673 49.3011C65.4006 49.9792 65.5673 50.7727 65.5673 51.6818C65.5673 52.5833 65.4006 53.3712 65.0673 54.0455C64.7377 54.7197 64.2756 55.2443 63.6809 55.6193C63.09 55.9943 62.4006 56.1818 61.6127 56.1818ZM61.6127 54.9773C62.2112 54.9773 62.7036 54.8239 63.09 54.517C63.4764 54.2102 63.7624 53.8068 63.948 53.3068C64.1336 52.8068 64.2264 52.2652 64.2264 51.6818C64.2264 51.0985 64.1336 50.5549 63.948 50.0511C63.7624 49.5473 63.4764 49.1402 63.09 48.8295C62.7036 48.5189 62.2112 48.3636 61.6127 48.3636C61.0142 48.3636 60.5218 48.5189 60.1355 48.8295C59.7491 49.1402 59.4631 49.5473 59.2775 50.0511C59.0919 50.5549 58.9991 51.0985 58.9991 51.6818C58.9991 52.2652 59.0919 52.8068 59.2775 53.3068C59.4631 53.8068 59.7491 54.2102 60.1355 54.517C60.5218 54.8239 61.0142 54.9773 61.6127 54.9773ZM69.1345 56L66.4755 47.2727H67.8845L69.7709 53.9545H69.8618L71.7255 47.2727H73.1573L74.9982 53.9318H75.0891L76.9755 47.2727H78.3845L75.7255 56H74.4073L72.4982 49.2955H72.3618L70.4527 56H69.1345ZM81.3382 50.75V56H79.9973V47.2727H81.2927V48.6364H81.4064C81.6109 48.1932 81.9215 47.8371 82.3382 47.5682C82.7549 47.2955 83.2927 47.1591 83.9518 47.1591C84.5427 47.1591 85.0598 47.2803 85.503 47.5227C85.9461 47.7614 86.2908 48.125 86.5371 48.6136C86.7833 49.0985 86.9064 49.7121 86.9064 50.4545V56H85.5655V50.5455C85.5655 49.8598 85.3874 49.3258 85.0314 48.9432C84.6753 48.5568 84.1867 48.3636 83.5655 48.3636C83.1374 48.3636 82.7549 48.4564 82.4177 48.642C82.0844 48.8277 81.8211 49.0985 81.628 49.4545C81.4348 49.8106 81.3382 50.2424 81.3382 50.75ZM90.5376 44.3636V56H89.1967V44.3636H90.5376ZM96.379 56.1818C95.5911 56.1818 94.8998 55.9943 94.3051 55.6193C93.7142 55.2443 93.2521 54.7197 92.9188 54.0455C92.5892 53.3712 92.4244 52.5833 92.4244 51.6818C92.4244 50.7727 92.5892 49.9792 92.9188 49.3011C93.2521 48.6231 93.7142 48.0966 94.3051 47.7216C94.8998 47.3466 95.5911 47.1591 96.379 47.1591C97.1669 47.1591 97.8563 47.3466 98.4472 47.7216C99.0419 48.0966 99.504 48.6231 99.8335 49.3011C100.167 49.9792 100.334 50.7727 100.334 51.6818C100.334 52.5833 100.167 53.3712 99.8335 54.0455C99.504 54.7197 99.0419 55.2443 98.4472 55.6193C97.8563 55.9943 97.1669 56.1818 96.379 56.1818ZM96.379 54.9773C96.9775 54.9773 97.4699 54.8239 97.8563 54.517C98.2426 54.2102 98.5286 53.8068 98.7142 53.3068C98.8998 52.8068 98.9926 52.2652 98.9926 51.6818C98.9926 51.0985 98.8998 50.5549 98.7142 50.0511C98.5286 49.5473 98.2426 49.1402 97.8563 48.8295C97.4699 48.5189 96.9775 48.3636 96.379 48.3636C95.7805 48.3636 95.2881 48.5189 94.9017 48.8295C94.5153 49.1402 94.2294 49.5473 94.0438 50.0511C93.8581 50.5549 93.7653 51.0985 93.7653 51.6818C93.7653 52.2652 93.8581 52.8068 94.0438 53.3068C94.2294 53.8068 94.5153 54.2102 94.9017 54.517C95.2881 54.8239 95.7805 54.9773 96.379 54.9773ZM104.789 56.2045C104.236 56.2045 103.734 56.1004 103.283 55.892C102.832 55.6799 102.474 55.375 102.209 54.9773C101.944 54.5758 101.811 54.0909 101.811 53.5227C101.811 53.0227 101.91 52.6174 102.107 52.3068C102.304 51.9924 102.567 51.7462 102.897 51.5682C103.226 51.3902 103.59 51.2576 103.987 51.1705C104.389 51.0795 104.792 51.0076 105.198 50.9545C105.728 50.8864 106.158 50.8352 106.487 50.8011C106.821 50.7633 107.063 50.7008 107.215 50.6136C107.37 50.5265 107.448 50.375 107.448 50.1591V50.1136C107.448 49.553 107.294 49.1174 106.987 48.8068C106.684 48.4962 106.224 48.3409 105.607 48.3409C104.967 48.3409 104.465 48.4811 104.101 48.7614C103.737 49.0417 103.482 49.3409 103.334 49.6591L102.061 49.2045C102.289 48.6742 102.592 48.2614 102.97 47.9659C103.353 47.6667 103.77 47.4583 104.22 47.3409C104.675 47.2197 105.122 47.1591 105.561 47.1591C105.842 47.1591 106.164 47.1932 106.527 47.2614C106.895 47.3258 107.249 47.4602 107.59 47.6648C107.934 47.8693 108.22 48.178 108.448 48.5909C108.675 49.0038 108.789 49.5568 108.789 50.25V56H107.448V54.8182H107.379C107.289 55.0076 107.137 55.2102 106.925 55.4261C106.713 55.642 106.431 55.8258 106.078 55.9773C105.726 56.1288 105.296 56.2045 104.789 56.2045ZM104.993 55C105.523 55 105.97 54.8958 106.334 54.6875C106.701 54.4792 106.978 54.2102 107.164 53.8807C107.353 53.5511 107.448 53.2045 107.448 52.8409V51.6136C107.391 51.6818 107.266 51.7443 107.073 51.8011C106.883 51.8542 106.664 51.9015 106.414 51.9432C106.167 51.9811 105.927 52.0152 105.692 52.0455C105.461 52.072 105.273 52.0947 105.129 52.1136C104.781 52.1591 104.455 52.233 104.152 52.3352C103.853 52.4337 103.611 52.5833 103.425 52.7841C103.243 52.9811 103.152 53.25 103.152 53.5909C103.152 54.0568 103.325 54.4091 103.669 54.6477C104.018 54.8826 104.459 55 104.993 55ZM114.371 56.1818C113.644 56.1818 113.002 55.9981 112.445 55.6307C111.889 55.2595 111.453 54.7367 111.139 54.0625C110.824 53.3845 110.667 52.5833 110.667 51.6591C110.667 50.7424 110.824 49.947 111.139 49.2727C111.453 48.5985 111.89 48.0777 112.451 47.7102C113.012 47.3428 113.659 47.1591 114.394 47.1591C114.962 47.1591 115.411 47.2538 115.741 47.4432C116.074 47.6288 116.328 47.8409 116.502 48.0795C116.68 48.3144 116.818 48.5076 116.917 48.6591H117.031V44.3636H118.371V56H117.076V54.6591H116.917C116.818 54.8182 116.678 55.0189 116.496 55.2614C116.315 55.5 116.055 55.714 115.718 55.9034C115.381 56.089 114.932 56.1818 114.371 56.1818ZM114.553 54.9773C115.091 54.9773 115.546 54.8371 115.917 54.5568C116.288 54.2727 116.57 53.8807 116.764 53.3807C116.957 52.8769 117.053 52.2955 117.053 51.6364C117.053 50.9848 116.959 50.4148 116.769 49.9261C116.58 49.4337 116.3 49.0511 115.928 48.7784C115.557 48.5019 115.099 48.3636 114.553 48.3636C113.985 48.3636 113.512 48.5095 113.133 48.8011C112.758 49.089 112.476 49.4811 112.286 49.9773C112.101 50.4697 112.008 51.0227 112.008 51.6364C112.008 52.2576 112.103 52.822 112.292 53.3295C112.485 53.8333 112.769 54.2348 113.144 54.5341C113.523 54.8295 113.993 54.9773 114.553 54.9773Z" fill="white"/>
+                  <path d="M129 54.25V56.125C129 56.6223 129.198 57.0992 129.549 57.4508C129.901 57.8025 130.378 58 130.875 58H142.125C142.622 58 143.099 57.8025 143.451 57.4508C143.802 57.0992 144 56.6223 144 56.125V54.25M140.25 50.5L136.5 54.25M136.5 54.25L132.75 50.5M136.5 54.25V43" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="30" y="27.5" width="132" height="46" rx="9.5" stroke="white" shape-rendering="crispEdges"/>
+                </g>
+                <defs>
+                  <filter id="filter0_d_37_63" x="0.166663" y="0.33333" width="197" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dx="2.66667" dy="5.33333"/>
+                    <feGaussianBlur stdDeviation="16"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_37_63"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_37_63" result="shape"/>
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script lang="js">
+    axios.post('/getImage', {
+      "prompt" : "Super Mario learning to fly in an airport, Painting by Leonardo Da Vinci",
+      "img_height" : 512,
+      "img_width" : 512,
+      "num_inference_steps" : 50,
+      "guidance_scale" : 7.5,
+      "seed" : 10,
+      "num_images_per_prompt" : 1,
+      "model": "runwayml/stable-diffusion-v1-5"
+    }).then(console.log);
+  </script>
+
+
+</body>
+
+</html>
